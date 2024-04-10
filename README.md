@@ -4,7 +4,26 @@
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" width="40" height="40" />&nbsp; _Description_
 
 > ### _Next.js_ is a React framework for building full-Stack Web Applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations. 
-- It helps you for building server-rendered and statically-generated web applications. It offers a variety of features that streamline the development process and enhance the performance of web applications.
+- It aids in creating web apps with server-rendering and statically-generated web applications, offering features to improve development and performance.
+- You still write React codes and use React features. NextJS just enhances your React apps and adds more features.
+  
+<br/>
+
+> [!IMPORTANT]
+>> #### Key Features & Benefits : 
+#### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _Server-side Rendering_
+- Automatic page re-rendering - Great for SEO and initial load
+- Blending Client-side and Server-side:
+  - Fetch data on the server and render finished pages
+
+#### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _File-based Routing_
+- Define pages and routes with files and folders instead of code
+- Less code, less work, highly understandable
+
+#### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _Fullstack Capabilities_
+- Easily add Backend (Server-side) code to your Next/React apps
+- Storing data, getting data, authentication etc. cab be added to your React projects
+
 <br/>
 
 ***
@@ -14,11 +33,12 @@
 
  > #### For this project, <br/>
  
-> [!IMPORTANT]
+
 > _Which Concepts in Have I Covered_:  
 
-#### <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" alt="⚙" width="18"> &nbsp; _File-based Routing & Page Pre-rendering_
-#### <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" alt="⚙" width="18"> &nbsp; _Data Fetching & Adding on API_
+#### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _File-based Routing & Page Pre-rendering_
+- _Install_: _` npx create-next-app `_  _` npx create-next-app@latest `_
+#### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _Data Fetching & Adding on API_
 
  
 
