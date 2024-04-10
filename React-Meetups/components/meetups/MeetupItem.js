@@ -2,7 +2,7 @@ import Card from '../ui/Card';
 
 export default function MeetupItem({ image, title, address }) {
   return (
-    <li className="item">
+    <li className="meetup-item">
       <Card>
         <div className="image">
           <img src={image} alt={title} />

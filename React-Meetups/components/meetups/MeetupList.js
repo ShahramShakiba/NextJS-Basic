@@ -2,7 +2,7 @@ import MeetupItem from './MeetupItem';
 
 export default function MeetupList({ meetups }) {
   return (
-    <ul className="list">
+    <ul className="meetup-list">
       {meetups.map((meetup) => (
         <MeetupItem
           key={meetup.id}

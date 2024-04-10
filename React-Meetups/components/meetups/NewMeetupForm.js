@@ -28,7 +28,7 @@ export default function NewMeetupForm({ onAddMeetup }) {
 
   return (
     <Card>
-      <form className="form" onSubmit={submitHandler}>
+      <form className="newMeetup-form" onSubmit={submitHandler}>
         <div className="control">
           <label htmlFor="title"> Meetup Title </label>
           <input type="text" required id="title" ref={titleInputRef} />
