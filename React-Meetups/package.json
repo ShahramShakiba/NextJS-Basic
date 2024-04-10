@@ -1,5 +1,7 @@
 {
-  "name": "react-meetups",
+  "name": "react-meetups-next.js",
+  "instructor": "Maximilian Schwarzmuller",
+  "author": "Shahram Shakiba",
   "version": "0.1.0",
   "private": true,
   "scripts": {
