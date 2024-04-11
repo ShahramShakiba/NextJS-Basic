@@ -141,18 +141,18 @@ h6 {
       font: inherit;
       cursor: pointer;
       color: var(--color-primary-200);
-      border: 1px solid #fcf3e1;
+      border: 1px solid #999692;
       background-color: var(--color-gray-700);
       padding: 0.5rem 1.5rem;
-      border-radius: 1px 10px;
+      border-radius: 3px 10px;
       transition: all 0.2s ease-in;
-      box-shadow: 0 4px 6px rgba(70, 70, 70, 0.87);
+      box-shadow: 0 4px 6px rgba(70, 70, 70, 0.7);
 
       &:hover,
       &:active {
         color: var(--color-primary-500);
         background-color: var(--color-gray-800);
-        box-shadow: 0 4px 6px rgba(70, 70, 70, 0.72);
+        box-shadow: 0 4px 6px rgba(70, 70, 70, 0.6);
       }
     }
   }
