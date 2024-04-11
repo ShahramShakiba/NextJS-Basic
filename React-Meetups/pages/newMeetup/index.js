@@ -1,6 +1,5 @@
 // our-domain.com/new-meetup
 //================================
-
 import NewMeetupForm from '@/components/meetups/NewMeetupForm';
 
 export default function NewMeetupPage() {
@@ -8,5 +7,9 @@ export default function NewMeetupPage() {
     console.log(enteredMeetupData);
   };
 
-  return <NewMeetupForm onAddMeetup={addMeetupHandler} />;
+  return (
+    <>
+      <NewMeetupForm onAddMeetup={addMeetupHandler} />
+    </>
+  );
 }
