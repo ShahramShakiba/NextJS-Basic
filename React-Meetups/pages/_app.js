@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
 
 /* Component & pageProps
 
-* pageProps: are passed into this Component(App) automatically by Nextjs - these props are specific props our pages might be getting
+* pageProps: are passed into this Component(_app) automatically by Nextjs - these props are specific props our pages might be getting
 
 * Component: is a prop that holds the actual page-content that should be rendered - it wil be different whenever we switch a page
 */

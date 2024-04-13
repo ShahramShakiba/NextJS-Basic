@@ -22,7 +22,7 @@ export default function MainNavigation() {
 
           <li>
             <Link href="/newMeetup" >
-              Add New Meetup
+              Add Meetup
             </Link>
           </li>
         </ul>

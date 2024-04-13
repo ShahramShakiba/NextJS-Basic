@@ -1,6 +1,14 @@
+import { useRouter } from 'next/router';
 import Card from '../ui/Card';
 
-export default function MeetupItem({ image, title, address }) {
+export default function MeetupItem({ image, title, address, id }) {
+  const router = useRouter();
+
+  const showDetailsHandler = () => {
+    //navigate to [meetupID]
+    router.push('/' + id);
+  };
+
   return (
     <li className="meetup-item">
       <Card>
@@ -14,9 +22,13 @@ export default function MeetupItem({ image, title, address }) {
         </div>
 
         <div className="actions">
-          <button>Show Details</button>
+          <button onClick={showDetailsHandler}>Show Details</button>
         </div>
       </Card>
     </li>
   );
 }
+
+/* router.query
+- query: gives us access to all that data that might be part of the URL for a dynamic page for example
+*/
