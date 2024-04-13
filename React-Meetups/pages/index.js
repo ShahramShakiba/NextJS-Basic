@@ -73,3 +73,24 @@ BUT Nextjs has 2 solution for pre-rendering the content-data
 /* revalidate
 - this page will not just build during the build process, but it also be generated every couple of seconds on the server, at least if there are requests
 */
+
+/* getServerSideProps()
+
+---> run always on the server after deployment | use it: if you need to access to request-obj and authentication & if you have multiple-data that changes every seconds
+
+export async function getServerSideProps(context) {
+  ---> access to request-obj & response-obj
+  const req = context.req;
+  const res = context.res;
+
+  ---> fetch data from an API
+
+  return {
+    props: {
+      meetups: DUMMY_MEETUPS,
+    },
+
+    ---> this fn does not need "revalidate"
+  };
+}
+*/
