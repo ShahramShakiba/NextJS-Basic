@@ -1,5 +1,17 @@
-/* Dynamic Path
+import MeetupDetail from '@/components/meetups/MeetupDetail';
 
+export default function MeetupDetails() {
+  return (
+    <MeetupDetail
+      image="https://resources.sansan.com/hubfs/Imported_Blog_Media/GettyImages-530685779-Article-9.jpg"
+      title="First Meetup"
+      address="London"
+      description="This is first meetup."
+    />
+  );
+}
+
+/* Dynamic Path
 - Folder: [meetupID] OR File: [meetupID].js   =>  
 ?- dynamic paths allow you to create dynamic routes for your application.
 
