@@ -27,8 +27,8 @@
 <br/>
 
 ***
-<!--===================== React Meetups =============================-->
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Laptop.webp" alt="Laptop" width="35" height="30"  /> &nbsp; _React Meetups_  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" width="20"  />
+<!--===================== React / Next Meetups =============================-->
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Laptop.webp" alt="Laptop" width="35" height="30"  /> &nbsp; _React/Next Meetups_  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" width="20"  />
 - #### In the ..., <br/><br/>
 
  > #### For this project, <br/>
@@ -45,9 +45,8 @@
 <br/>
 
 <!-------- try it live -------->
-#### _Give it a go in real-time and give me a Star_ &nbsp; <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25"  /> <a href="" target="_blank"> &nbsp; _React Meetups_ </a> 
-> [!WARNING] 
-> ...
+#### _Give it a go in real-time and give me a Star_ &nbsp; <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25"  /> <a href="" target="_blank"> &nbsp; _React/Next Meetups_ </a> 
+
 
  
 <!--------- Video --------->
