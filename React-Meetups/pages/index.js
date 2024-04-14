@@ -52,6 +52,7 @@ BUT Nextjs has 2 solution for pre-rendering the content-data
     a page component is pre-rendered when you build your application, when you build the Next project, When You build it for the production(npm run build)
 
   - Server-side Rendering (SSR)
+    When you do this, you'll create an HTML file with all of the content of the site and send it back to the user. The user will then get an fully rendered HTML page that contains all of the necessary information for them to see your site without having to wait for any JavaScript or CSS files to load. This means that users who visit your site will be able to see everything much faster than if they were just looking at blank screen while waiting for JavaScript files to load.
 */
 
 /* getStaticProps()

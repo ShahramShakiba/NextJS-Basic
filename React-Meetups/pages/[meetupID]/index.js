@@ -1,14 +1,34 @@
 import MeetupDetail from '@/components/meetups/MeetupDetail';
 
-export default function MeetupDetails() {
+export default function MeetupDetails({ meetupData }) {
   return (
     <MeetupDetail
-      image="https://resources.sansan.com/hubfs/Imported_Blog_Media/GettyImages-530685779-Article-9.jpg"
+      image={meetupData.image}
       title="First Meetup"
       address="London"
       description="This is first meetup."
     />
   );
+}
+
+export async function getStaticProps(context) {
+  // fetch data for a single meetup
+
+  // identifier between the square-brackets will be properties and the value will be the actual value encoded in the URL
+  const meetupID = context.params.meetupID;
+
+  return {
+    props: {
+      meetupData: {
+        image:
+          'https://resources.sansan.com/hubfs/Imported_Blog_Media/GettyImages-530685779-Article-9.jpg',
+        id: meetupID,
+        title: 'First Meetup',
+        address: 'London',
+        description: 'This is first meetup.',
+      },
+    },
+  };
 }
 
 /* Dynamic Path
