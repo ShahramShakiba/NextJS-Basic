@@ -2,7 +2,7 @@ import { useRef } from 'react';
 
 import Card from '../ui/Card';
 
-export default function NewMeetupForm({ onAddMeetup }) {
+export default function NewMeetupForm(props) {
   const descriptionInputRef = useRef();
   const addressInputRef = useRef();
   const titleInputRef = useRef();
@@ -23,7 +23,7 @@ export default function NewMeetupForm({ onAddMeetup }) {
       description: enteredDescription,
     };
 
-    onAddMeetup(meetupData);
+    props.onAddMeetup(meetupData);
   };
 
   return (

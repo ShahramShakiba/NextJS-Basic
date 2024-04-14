@@ -13,21 +13,25 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const data = req.body; // data of incoming request
 
-    const client = await MongoClient.connect(
-      'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=react-next-meetups'
-    );
-    const db = client.db(); // get hold of the database-> react-next-meetups
+    try {
+      const client = await MongoClient.connect(
+        'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh'
+      );
+      const db = client.db(); // get hold of the database-> react-next-meetups
+      const meetupsCollection = db.collection('meetups');
 
-    const meetupsCollection = db.collection('meetups');
+      // inserting one new document(is just ana obj) into this collection
+      const result = await meetupsCollection.insertOne(data);
+      console.log(result);
 
-    // inserting one new document(is just ana obj) into this collection
-    const result = meetupsCollection.insertOne(data);
-    console.log(result);
+      client.close();
 
-    client.close();
-
-    //send back a response | 201 = sth inserted successfully
-    res.status(201).json({ message: 'Meetup inserted!' });
+      //send back a response | 201 = sth inserted successfully
+      res.status(201).json({ message: 'Meetup inserted!' });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: 'Failed to insert meetup.' });
+    }
   }
 }
 
