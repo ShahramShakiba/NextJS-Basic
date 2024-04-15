@@ -36,7 +36,10 @@ export async function getStaticPaths() {
   client.close();
 
   return {
-    fallback: false,
+    //true or 'blocking': the list of paths, there might be more valid pages
+    //true: immediately return an empty page
+    //'blocking': user won't see anything until the page was pre-generated
+    fallback: 'blocking',
 
     paths: meetups.map((meetup) => ({
       params: {

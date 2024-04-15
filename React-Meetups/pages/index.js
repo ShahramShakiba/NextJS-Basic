@@ -48,7 +48,7 @@ export async function getStaticProps() {
       })),
     },
 
-    revalidate: 10, // 10 seconds | 3600 1H
+    revalidate: 1, // 10 seconds | 3600 1H
   };
 }
 
