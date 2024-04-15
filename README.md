@@ -29,19 +29,31 @@
 ***
 <!--===================== React / Next Meetups =============================-->
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Laptop.webp" alt="Laptop" width="35" height="30"  /> &nbsp; _React/Next Meetups_  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" width="20"  />
-- #### In the ..., <br/><br/>
-
- > #### For this project, <br/>
+- #### In this project, my primary objective is to provide an overview of the core features of NextJS, demonstrating how it streamlines the process of building React Apps. This includes discussing how to create pages, fetch data for pre-rendering, run server-side code, connect to MongoDB, and utilize API Routes to incorporate a custom REST API within the React project.
+-  This setup enables users to seamlessly send requests for storing new meetups. <br/><br/>
  
 
 > _Which Concepts in Have I Covered_:  
 
 #### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _File-based Routing & Page Pre-rendering_
 - _Install_: _` npx create-next-app `_  _` npx create-next-app@latest `_
+-  Simplified Routing with File-based Routing
+-  Adding Nested Paths & Pages (Nested Routes)
+-  Creating Dynamic Pages (with Parameters)
+-  Extracting Dynamic Parameter Values
+-  Linking Between Pages
+-  The Layout Wrapper in _app.js File 
 #### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Bubbles.png" alt="Bubbles" height="20" /> &nbsp; _Data Fetching & Adding on API_
+- Data fetching for pre-rendering using getStaticProps() for static pages
+- _revalidate_ Static Site Generation (SSG) 
+- Exploring Server-side Rendering (SSR) with getServerSideProps()
+- Working with Params for SSG Data Fetching
+- Preparing Paths with getStaticPaths & Working With Fallback Pages
+- Working with ` MongoDB `
+- Sending & getting HTTP Requests To Our API Routes
+- Adding Head Metadata
 
  
-
 <br/>
 
 <!-------- try it live -------->
@@ -75,7 +87,7 @@
   </a>
 
 
-<!--======================= MongoDB
+<!--==== MongoDB
 
 01. https://www.mongodb.com/atlas
 02. Try Free
@@ -102,7 +114,14 @@
     change the user & password & appName, like this:
     'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh'
 
-17. 
+
+
+
+file-based routing
+API routes
+Page pre-rendering with data fetching
+
+Hosting provider: Vercel
 
 
 
