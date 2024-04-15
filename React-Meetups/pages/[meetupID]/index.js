@@ -1,34 +1,38 @@
+import { MongoClient, ObjectId } from 'mongodb';
 import MeetupDetail from '@/components/meetups/MeetupDetail';
 
-export default function MeetupDetails() {
+export default function MeetupDetails({ meetupData }) {
   return (
     <MeetupDetail
-      image="https://resources.sansan.com/hubfs/Imported_Blog_Media/GettyImages-530685779-Article-9.jpg"
-      title="First Meetup"
-      address="London"
-      description="This is first meetup."
+      image={meetupData.image}
+      title={meetupData.title}
+      address={meetupData.address}
+      description={meetupData.description}
     />
   );
 }
 
 // getStaticPaths() is a function you need to export if you have a dynamic-page and you're using getStaticProps()
 export async function getStaticPaths() {
+  const client = await MongoClient.connect(
+    'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh'
+  );
+  const db = client.db();
+  const meetupsCollection = db.collection('meetups');
+
+  //find({}, {}) = first brackets: find all data but second brackets: which fields should be extracted | only include id
+  const meetups = await meetupsCollection.find({}, { _id: 1 }).toArray();
+
+  client.close();
+
   return {
     fallback: false,
 
-    // array of all the possible dynamic paths
-    paths: [
-      {
-        params: {
-          meetupID: 'm1',
-        },
+    paths: meetups.map((meetup) => ({
+      params: {
+        meetupID: meetup._id.toString(),
       },
-      {
-        params: {
-          meetupID: 'm2',
-        },
-      },
-    ],
+    })),
   };
 }
 
@@ -39,15 +43,26 @@ export async function getStaticProps(context) {
   //identifier between the square-brackets will be properties and the value will be the actual value encoded in the URL
   const meetupID = context.params.meetupID;
 
+  const client = await MongoClient.connect(
+    'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh'
+  );
+  const db = client.db();
+  const meetupsCollection = db.collection('meetups');
+
+  const selectedMeetup = await meetupsCollection.findOne({
+    _id: new ObjectId(meetupID), //convert this string to an object-id
+  });
+
+  client.close();
+
   return {
     props: {
       meetupData: {
-        image:
-          'https://resources.sansan.com/hubfs/Imported_Blog_Media/GettyImages-530685779-Article-9.jpg',
-        id: meetupID,
-        title: 'First Meetup',
-        address: 'London',
-        description: 'This is first meetup.',
+        id: selectedMeetup._id.toString(),
+        title: selectedMeetup.title,
+        address: selectedMeetup.address,
+        description: selectedMeetup.description,
+        image: selectedMeetup.image,
       },
     },
   };
