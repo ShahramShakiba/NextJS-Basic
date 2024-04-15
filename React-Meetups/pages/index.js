@@ -1,25 +1,7 @@
 // our-domain.com/
 //================================
+import { MongoClient } from 'mongodb';
 import MeetupList from '@/components/meetups/MeetupList';
-
-const DUMMY_MEETUPS = [
-  {
-    id: 'm1',
-    title: 'First Meetup',
-    image:
-      'https://resources.sansan.com/hubfs/Imported_Blog_Media/GettyImages-530685779-Article-9.jpg',
-    address: 'London',
-    description: 'This is a first meetups!',
-  },
-  {
-    id: 'm2',
-    title: 'second Meetup',
-    image:
-      'https://www.profocustechnology.com/wp-content/uploads/2017/02/tech-meetup.jpg',
-    address: 'US',
-    description: 'This is a second meetups!',
-  },
-];
 
 export default function HomePage({ meetups }) {
   return (
@@ -31,12 +13,26 @@ export default function HomePage({ meetups }) {
 
 // if you need to add data-fetching to a page-component | fn = reserves-name
 export async function getStaticProps() {
-  // fetch data from an API
+  // fetch data(GET) from an API
+  const client = await MongoClient.connect(
+    'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh'
+  );
+  const db = client.db();
+  const meetupsCollection = db.collection('meetups');
+
+  const meetups = await meetupsCollection.find().toArray();
+
+  client.close();
 
   return {
     //this props will be the props-obj you receive in your page-component-fn
     props: {
-      meetups: DUMMY_MEETUPS,
+      meetups: meetups.map((meetup) => ({
+        title: meetup.title,
+        address: meetup.address,
+        image: meetup.image,
+        id: meetup._id.toString(),
+      })),
     },
 
     revalidate: 10, // 10 seconds | 3600 1H
