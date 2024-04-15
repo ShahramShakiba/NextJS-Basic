@@ -75,7 +75,43 @@
   </a>
 
 
+<!--======================= MongoDB
 
+01. https://www.mongodb.com/atlas
+02. Try Free
+03. Sign up / login
+04. Deployment - Database -> Create
+05. Choose Shared (it's free)
+06. pick a region
+07. Cluster Tier -> MO-Sandbox
+08. then click Create Cluster
+
+09. Security - Network Access -> Add IP A ddress
+10. enter your local-machin IP address 
+11. Database Access - Create a User
+
+12. Database - click, Connect(on your new created cluster)
+13. choose, Drivers
+
+14. in your terminal: npm install mongodb
+15. then, import { MongoClient } from 'mongodb'; in your file
+16. call this in your code, ->->-> MongoClient.connect();
+16. Add your connection string into your application code:
+    mongodb+srv://shahram:<password>@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh
+
+    change the user & password & appName, like this:
+    'mongodb+srv://shahram:96C5ScLzZs4ghP7Z@cluster-sh.rgaxnx4.mongodb.net/?retryWrites=true&w=majority&appName=Cluster-Sh'
+
+17. 
+
+
+
+
+
+
+
+
+===========================-->
 
 
 
