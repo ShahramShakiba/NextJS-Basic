@@ -1,11 +1,24 @@
 // our-domain.com/
 //================================
 import { MongoClient } from 'mongodb';
+import Head from 'next/head';
 import MeetupList from '@/components/meetups/MeetupList';
 
 export default function HomePage({ meetups }) {
   return (
     <>
+      {/*  Head Metadata */}
+      <Head>
+        <title>React&Next Meetups</title>
+        <meta
+          name="description"
+          content="Browse a huge list of highly React & Next Meetups"
+        />
+        <link rel="icon" type="image/png" href="ico.png" />
+        <meta name="author" content="Shahram Shakiba" />
+        <meta />
+      </Head>
+
       <MeetupList meetups={meetups} />
     </>
   );
