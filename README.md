@@ -58,11 +58,17 @@
 
 <!-------- try it live -------->
 #### _Give it a go in real-time and give me a Star_ &nbsp; <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Glowing Star" width="25"  /> <a href="" target="_blank"> &nbsp; _React/Next Meetups_ </a> 
+> [!WARNING]
+> NextJS Deployment Failed!
 
 
  
 <!--------- Video --------->
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Clapper%20Board.webp" alt="Clapper Board" width="35" />
+
+
+
+https://github.com/ShahramShakiba/NextJS-Basic/assets/110089830/76d1cea9-3c9b-4cd0-aeb4-3aaf58c05264
 
 
 
